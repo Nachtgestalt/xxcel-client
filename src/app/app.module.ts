@@ -7,8 +7,6 @@ import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
 import {LoginComponent} from './auth/pages/login/login.component';
 import {APP_ROUTES} from './app.routes';
-import {NbThemeModule, NbLayoutModule} from '@nebular/theme';
-import {NbEvaIconsModule} from '@nebular/eva-icons';
 import {AngularMaterialModule} from './angular-material.module';
 import {FlexLayoutModule} from '@angular/flex-layout';
 
@@ -31,10 +29,7 @@ const config: SocketIoConfig = {url: environment.wsUrl, options: {}};
     FlexLayoutModule,
     FormsModule, ReactiveFormsModule,
     RouterModule.forRoot(APP_ROUTES),
-    SocketIoModule.forRoot(config)
-    // NbThemeModule.forRoot({ name: 'default' }),
-    // NbLayoutModule,
-    // NbEvaIconsModule
+    SocketIoModule.forRoot(config),
   ],
   providers: [],
   bootstrap: [AppComponent],
