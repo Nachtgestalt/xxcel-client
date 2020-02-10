@@ -1,43 +1,9 @@
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
-// Plus imports for other components in your app.
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
-
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$client-primary: mat-palette($mat-indigo);
-$client-accent: mat-palette($mat-pink, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
-$client-warn: mat-palette($mat-red);
-
-// Create the theme object (a Sass map containing all of the palettes).
-$client-theme: mat-light-theme($client-primary, $client-accent, $client-warn);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
-@include angular-material-theme($client-theme);
-
-/* You can add global styles to this file, and also import other style files */
-
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  min-height: 100vh;
-  font-family: 'Roboto', sans-serif;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .app-header {
   justify-content: space-between;
@@ -65,7 +31,7 @@ body {
   float: left;
   padding: 60px 50px 40px 50px;
   width: 100%;
-  background: #fff;
+  background: #303030;
   border-radius: 10px;
   transform: scale(1);
   -webkit-transform: scale(1);
@@ -90,7 +56,7 @@ body {
   border-radius: 10px;
   position: absolute;
   top: -10px;
-  background: rgba(255, 255, 255, .6);
+  background: rgba(48, 48, 48, .6);
   left: 0;
   transform: scale(.95);
   -webkit-transform: scale(.95);
@@ -127,13 +93,24 @@ body {
 .login-wrapper .mat-stroked-button {
   border: 1px solid currentColor;
   line-height: 54px;
-  background: #FFF7FA;
+  background: #303030;
 }
 
 .login-wrapper .mat-form-field-appearance-legacy .mat-form-field-infix {
   padding: 0.8375em 0;
 }
 
+.position-fixed{
+  position: fixed
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.content {
+  display: flex;
+  margin-top: 58px
+}
+
+// MATERIAL STYLES
+.mat-toolbar.mat-primary {
+  height: 50px;
+  z-index: 100;
+}
