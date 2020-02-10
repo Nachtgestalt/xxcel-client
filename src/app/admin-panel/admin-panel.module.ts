@@ -9,6 +9,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {AdminPanelComponent} from './admin-panel.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 
@@ -22,7 +23,8 @@ import {AdminPanelComponent} from './admin-panel.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ]
 })
 export class AdminPanelModule { }
