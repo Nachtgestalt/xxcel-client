@@ -1,0 +1,27 @@
+.products-page__wrapper {
+  padding: 10px;
+  margin-top: 58px;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+
+.products-page__grid {
+  display: grid;
+  grid-template-rows: .1fr .7fr .1fr;
+  height: 100%;
+}
+
+.products-page__table-container{
+  position: relative;
+  max-height: 450px;
+  overflow: auto;
+  margin: 10px;
+}
+
+table {
+  width: 100%;
+}

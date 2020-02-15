@@ -1,0 +1,61 @@
+<div class="products-page__wrapper">
+  <div class="products-page__grid">
+
+    <div class="inline-flex flex-row-reverse">
+      <button mat-stroked-button color="accent" class="btn-block">Registrar pieza</button>
+    </div>
+
+    <div class="relative">
+      <div class="products-page__table-container">
+        <table mat-table [dataSource]="dataSource">
+
+          <!-- No. Procedencia Column -->
+          <ng-container matColumnDef="position">
+            <th mat-header-cell *matHeaderCellDef> No. Procedencia</th>
+            <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+          </ng-container>
+
+          <!-- No. Inventario Column -->
+          <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> No. Inventario</th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          </ng-container>
+
+          <!-- No. Catalogo Column -->
+          <ng-container matColumnDef="weight">
+            <th mat-header-cell *matHeaderCellDef> No. Catalogo</th>
+            <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+          </ng-container>
+
+          <!-- Tipo de objeto Column -->
+          <ng-container matColumnDef="symbol">
+            <th mat-header-cell *matHeaderCellDef> Tipo de objeto</th>
+            <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+          </ng-container>
+
+          <!-- Opciones de objeto Column -->
+          <ng-container matColumnDef="option">
+            <th mat-header-cell *matHeaderCellDef> Opciones</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-mini-fab [color]="'success'" matTooltip="Editar pieza">
+                <mat-icon>edit</mat-icon>
+              </button>
+              <button mat-mini-fab color="warn"
+                      matTooltip="Eliminar pieza" class="mx-3">
+                <mat-icon>delete_forever</mat-icon>
+              </button>
+            </td>
+          </ng-container>
+
+          <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="relative">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium aliquam dolorem eligendi eos error fugit
+        hic illum impedit odio officiis, optio praesentium quae quas quis ratione repellat suscipit ullam velit.</p>
+    </div>
+  </div>
+</div>
